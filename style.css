@@ -1,0 +1,117 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf6fa;
+    color: #192235;
+    padding: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #d9e2ec;
+    border-radius: 30px;
+    padding: 40px;
+    min-height: 400px;
+    position: relative;
+    box-shadow: 0 10px 25px #00000010;
+}
+
+.numero {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 100px;
+    font-weight: bold;
+    color: #eeeeee;
+}
+
+h2 {
+    position: relative;
+    margin: 65px 0 40px;
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* 01 - Transition */
+
+.botao-transicao {
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botao-transicao:hover {
+    background: #2563eb;
+    transform: translateY(-5px);
+}
+
+/* 02 - Keyframes */
+
+.animacao {
+    background: #111827;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    animation: entrada 2s ease-in-out infinite alternate;
+}
+
+@keyframes entrada {
+    from {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(15px);
+        opacity: 1;
+    }
+}
+
+/* 03 - JavaScript */
+
+.botao-js {
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botao-js.ativo {
+    background: #16a34a;
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
